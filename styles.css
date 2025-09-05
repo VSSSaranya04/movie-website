@@ -1,0 +1,112 @@
+/***** Yeah, General Styles. Nothing too wild here. *****/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #111;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+  /* TODO: maybe switch to a Google Font later? */
+}
+
+/* HEADER VIBES */
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  /* border-bottom: 1px solid #333;  nah, too harsh */
+}
+
+/* I mean, gotta make the h1 pop */
+h1 {
+  margin: 0;
+  color: #ffcc00;
+  letter-spacing: 1px; /* just a lil extra flair */
+}
+
+/* Search bar, filter, theme button – all looking tidy */
+#searchBox, 
+#categoryFilter, 
+#toggleTheme {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* not too small, not too big */
+}
+
+/* Big yellow button for toggling? Yes, please. */
+#toggleTheme {
+  cursor: pointer;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+#toggleTheme:hover {
+  background: #ffd633; /* slightly brighter */
+}
+
+/* MOVIES! Gimme that grid. */
+#moviesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  /* TODO: center align grid on really wide screens */
+}
+
+/* Movie Card – where the magic happens */
+.movie-card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4); /* subtle shadow, because why not */
+}
+
+/* Hover for a lil’ zoom action */
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+/* Poster needs to fit – no weird stretching, please */
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* border-bottom: 1px solid #333; // felt unnecessary, leaving here tho */
+}
+
+/* Titles should breathe */
+.movie-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* Description goes here, muted ‘cause we’re classy */
+.movie-card p {
+  margin: 5px 0 15px;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* LIGHT MODE – for people who like to see stuff */
+.light-mode {
+  background: #f4f4f4;
+  color: #000;
+}
+
+.light-mode header {
+  background: #ddd;
+}
+
+.light-mode .movie-card {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* lighter shadow */
+}
+
+/* .movie-card span { font-style: italic; } */
+/* ← idk if I’ll ever need this, but leaving it here */
