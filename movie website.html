@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>🎬 My Movies</h1>
+    <input type="text" id="searchBox" placeholder="Search movies...">
+    
+    <!-- Categories -->
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <option value="action">Action</option>
+      <option value="sci-fi">Sci-Fi</option>
+      <option value="drama">Drama</option>
+    </select>
+
+    <!-- Dark/Light Toggle -->
+    <button id="toggleTheme">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Movies Container -->
+  <main id="moviesContainer"></main>
+
+  <script src="sript.js"></script>
+</body>
+</html>
